@@ -1,0 +1,136 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartTable Availability Checker</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">SmartTable</div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu Status</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>SmartTable Availability Checker</h1>
+      <p>
+        A Browser-Based Restaurant Food Availability Tracker
+        for Real-Time Dining Decisions
+      </p>
+
+      <button onclick="scrollToMenu()">Check Menu Status</button>
+    </div>
+  </section>
+
+  <!-- Menu Status Section -->
+  <section class="menu-section" id="menu">
+
+    <div class="section-title">
+      <h2>Live Food Availability</h2>
+      <p>Real-time restaurant menu tracking system</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+      <button class="active" onclick="filterItems('all')">All</button>
+      <button onclick="filterItems('available')">Available</button>
+      <button onclick="filterItems('limited')">Limited</button>
+      <button onclick="filterItems('unavailable')">Unavailable</button>
+    </div>
+
+    <!-- Food Cards -->
+    <div class="food-container">
+
+      <div class="food-card available" data-status="available">
+        <h3>Margherita Pizza</h3>
+        <p>Fresh cheese pizza with basil</p>
+        <span class="status green">Available</span>
+      </div>
+
+      <div class="food-card limited" data-status="limited">
+        <h3>Chicken Burger</h3>
+        <p>Grilled chicken with crispy fries</p>
+        <span class="status yellow">Limited Stock</span>
+      </div>
+
+      <div class="food-card unavailable" data-status="unavailable">
+        <h3>Pasta Alfredo</h3>
+        <p>Creamy white sauce pasta</p>
+        <span class="status red">Unavailable</span>
+      </div>
+
+      <div class="food-card available" data-status="available">
+        <h3>Veg Sandwich</h3>
+        <p>Healthy grilled vegetable sandwich</p>
+        <span class="status green">Available</span>
+      </div>
+
+      <div class="food-card limited" data-status="limited">
+        <h3>Chocolate Shake</h3>
+        <p>Cold and creamy chocolate drink</p>
+        <span class="status yellow">Limited Stock</span>
+      </div>
+
+      <div class="food-card unavailable" data-status="unavailable">
+        <h3>Paneer Tikka</h3>
+        <p>Spicy grilled paneer cubes</p>
+        <span class="status red">Sold Out</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+
+    <div class="about-content">
+      <h2>About the Project</h2>
+
+      <p>
+        SmartTable Availability Checker is a lightweight restaurant
+        food tracking system built using HTML, CSS, and JavaScript.
+        It allows restaurants to update food availability in real-time,
+        helping customers make faster dining decisions.
+      </p>
+
+      <div class="features">
+        <div class="feature-box">
+          <h3>Real-Time Updates</h3>
+          <p>Instant food availability tracking.</p>
+        </div>
+
+        <div class="feature-box">
+          <h3>Responsive Design</h3>
+          <p>Works smoothly on mobile and desktop devices.</p>
+        </div>
+
+        <div class="feature-box">
+          <h3>Interactive Filtering</h3>
+          <p>Filter available, limited, or unavailable dishes.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 SmartTable Availability Checker | Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
